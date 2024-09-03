@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="splashBgColor">#62D7DB</color>
+    <color name="toolColor">#6D81F2</color>
+    <color name="bgColor">#EBE2E2</color>
+    <color name="bottonBg">#EBEBE5</color>
+    <color name="stringColor">#3F51B5</color>
+    <color name="red">#EB0303</color>
+    <color name="header">#EC6262</color>
+    <color name="lavender">#8692F7</color>
+
+
+</resources>

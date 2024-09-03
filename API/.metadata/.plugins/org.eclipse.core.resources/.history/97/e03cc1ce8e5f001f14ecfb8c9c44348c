@@ -1,0 +1,103 @@
+package com.vehiclerentalservices.app.services.impl;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.vehiclerentalservices.app.entities.RateReview;
+import com.vehiclerentalservices.app.entities.Vehicle;
+import com.vehiclerentalservices.app.exceptions.ResourceNotFoundException;
+import com.vehiclerentalservices.app.payloads.RateReviewDto;
+import com.vehiclerentalservices.app.repositary.RateReviewRepositary;
+import com.vehiclerentalservices.app.repositary.VehicleRepositary;
+import com.vehiclerentalservices.app.services.RateReviewService;
+
+@Service
+public class RateReviewServiceImpl implements RateReviewService {
+	
+	@Autowired
+	private RateReviewRepositary rateRepo;
+	
+	@Autowired
+	private VehicleRepositary vehicleRepo;
+	
+	@Autowired
+	private ModelMapper mapper;
+	
+	
+	@Override
+	public List<RateReviewDto> getAllReview(){
+		
+		List<RateReview> rates = this.rateRepo.findAll();
+		List<RateReviewDto> rateDto = rates.stream()
+				.map(rate-> this.rateToDto(rate)).collect(Collectors.toList());
+		return rateDto;
+	}
+	
+	@Override
+	public RateReviewDto getRateById(Integer id) {
+		RateReview rate = this.rateRepo.findById(id)
+				.orElseThrow(()-> new ResourceNotFoundException("RateReview", "id", id));
+		return this.rateToDto(rate);
+	}
+
+	@Override
+	public RateReviewDto createRate(RateReviewDto rateRevieDto, Integer uId) {
+		
+		RateReview rate = this.dtoToRate(rateRevieDto);
+		rate.setUser();
+		RateReview saveRate = this.rateRepo.save(rate);
+		return this.rateToDto(saveRate);
+	}
+
+	@Override
+	public RateReviewDto updateRate(RateReviewDto rateReviewDto, Integer id) {
+		RateReview rate = this.rateRepo.findById(id)
+				.orElseThrow(()-> new ResourceNotFoundException("RateReview", "id", id));
+		
+		rate.setRate(rateReviewDto.getRate());
+		rate.setReview(rateReviewDto.getReview());
+		
+		RateReview rateReview = this.rateRepo.save(rate);
+		RateReviewDto updateRate = this.rateToDto(rateReview);
+		return updateRate;
+	}
+
+	@Override
+	public void deleteRate(Integer id) {
+		RateReview rate = this.rateRepo.findById(id)
+				.orElseThrow(()-> new ResourceNotFoundException("RateReview", "id", id));
+		this.rateRepo.delete(rate);
+
+	}
+
+	@Override
+	public List<RateReviewDto> getAllVehicle(Integer id) {
+		Vehicle vehicle = this.vehicleRepo.findById(id)
+				.orElseThrow(()->new ResourceNotFoundException("Vehicle", "id", id));
+		
+		List<RateReview> rateList = this.rateRepo.findAllByVehicle(vehicle);
+		
+		List<RateReviewDto> rateDto = rateList.stream().map((ratu)->this.mapper
+				.map(ratu, RateReviewDto.class)).collect(Collectors.toList());
+		return rateDto;
+	}
+	
+	private RateReview dtoToRate(RateReviewDto rateDto) {
+		
+		RateReview rate = this.mapper.map(rateDto, RateReview.class);
+		return rate;
+		
+	}
+	
+	
+	public RateReviewDto rateToDto(RateReview rate) {
+		
+		RateReviewDto rateDto = this.mapper.map(rate, RateReviewDto.class);
+		return rateDto;
+	}
+
+}

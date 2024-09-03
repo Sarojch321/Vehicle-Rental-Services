@@ -1,0 +1,24 @@
+package com.vehiclerentalservices.app.repositary;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.vehiclerentalservices.app.entities.Booking;
+import com.vehiclerentalservices.app.entities.User;
+import com.vehiclerentalservices.app.entities.Vehicle;
+
+@Repository
+public interface BookingRepositary extends JpaRepository<Booking, Integer>{
+	
+	List<Booking> findAllByUser(User user);
+	
+	@Query("select b from Booking b inner join user u where b.user = u.booking")
+	List<Booking> findAllByVehicle(Vehicle vehicle);
+	
+	List<Booking> findByFlag(int flag);
+	
+	
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SearchFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/carPic"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:src="@drawable/car" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pickupCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carPic"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txtPickLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pick up Location"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pdistrict"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPickLocation"
+                    android:layout_marginTop="15dp"
+                    android:text="District : "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/txtpDistrict"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPickLocation"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/pdistrict"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pcity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pdistrict"
+                    android:layout_marginTop="25dp"
+                    android:text="City : "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/txtpCity"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtpDistrict"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/pcity"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pwardNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pcity"
+                    android:layout_marginTop="25dp"
+                    android:text="Ward No. : "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/txtpWardNo"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pcity"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/pwardNo"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ptole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pwardNo"
+                    android:layout_marginTop="25dp"
+                    android:text="Tole : "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/txtpTole"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pwardNo"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/ptole"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/pickupCardView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="Search"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</FrameLayout>

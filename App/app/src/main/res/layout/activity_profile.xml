@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <include
+        android:id="@+id/profileMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/drawer_item_handler_menu"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:overScrollMode="never"
+        android:layout_below="@+id/profileMenu">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/editProfileBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:textSize="20sp"
+                android:textColor="@color/lavender"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/userPhoto"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/baseline_person_24" />
+
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userPhoto"
+                android:layout_marginTop="30dp"
+                android:text="Name"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/editTxtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtName"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtName"
+                android:layout_marginTop="20dp"
+                android:text="Email"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/editTxtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtEmail"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtEmail"
+                android:layout_marginTop="20dp"
+                android:text="Address"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/editTxtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAddress"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/txtPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtAddress"
+                android:layout_marginTop="20dp"
+                android:text="Mobile No. :-"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/editTxtPhone"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_toRightOf="@+id/txtPhone"
+                android:layout_below="@+id/editTxtAddress"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/txtDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtPhone"
+                android:layout_marginTop="20dp"
+                android:text="Date of Birth :-"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/editTxtDob"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtPhone"
+                android:layout_toRightOf="@+id/txtDob"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtDob"
+                android:layout_marginTop="20dp"
+                android:text="Status :-"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/editTxtStatus"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtDob"
+                android:layout_toRightOf="@+id/txtStatus"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtStatus"
+                android:layout_marginTop="20dp"
+                android:text="Role :-"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/editTxtRole"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtStatus"
+                android:layout_toRightOf="@+id/txtRole"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtLicensePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtRole"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="License Photo"
+                android:textSize="18sp" />
+
+
+            <ImageView
+                android:id="@+id/licensePhoto"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_below="@+id/txtLicensePhoto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/baseline_person_24" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

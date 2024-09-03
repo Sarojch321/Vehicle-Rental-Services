@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VehicleDetailActivity"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/vehicleDetailsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/vehicleDetailPhotoRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vehicleDetailsTitle"
+                android:layout_marginTop="20dp"/>
+
+
+            <TextView
+                android:id="@+id/bookNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Now"
+                android:background="@drawable/botton_bg"
+                android:layout_below="@id/vehicleDetailPhotoRecycler"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/AddFavorite"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/vehicleDetailPhotoRecycler"
+                android:background="@drawable/favorite"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toLeftOf="@+id/bookNow"/>
+
+            <TextView
+                android:id="@+id/deleteVehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:background="@drawable/botton_bg"
+                android:textSize="18sp"
+                android:layout_below="@id/bookNow"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type : "
+                android:textSize="18dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/vehicleDetailPhotoRecycler"/>
+
+            <TextView
+                android:id="@+id/detailsType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/vehicleDetailPhotoRecycler"
+                android:layout_toRightOf="@+id/b"/>
+
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount : "
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/b"/>
+
+            <TextView
+                android:id="@+id/detailsAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/b"
+                android:layout_toRightOf="@+id/c"/>
+
+            <TextView
+                android:id="@+id/d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Need Driver : "
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/c"/>
+
+            <TextView
+                android:id="@+id/detailsDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/c"
+                android:layout_toRightOf="@+id/d"/>
+
+            <TextView
+                android:id="@+id/e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status : "
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/d"/>
+
+            <TextView
+                android:id="@+id/detailsStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/d"
+                android:layout_toRightOf="@+id/e"/>
+
+            <TextView
+                android:id="@+id/f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Up Location"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/e"/>
+
+            <TextView
+                android:id="@+id/g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="District : "
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/f"/>
+
+            <TextView
+                android:id="@+id/detailsDistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/f"
+                android:layout_toRightOf="@+id/g"/>
+
+            <TextView
+                android:id="@+id/h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City : "
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/g"/>
+
+            <TextView
+                android:id="@+id/detailsCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/g"
+                android:layout_toRightOf="@+id/h"/>
+
+            <TextView
+                android:id="@+id/i"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ward : "
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/h"/>
+
+            <TextView
+                android:id="@+id/detailsWard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/h"
+                android:layout_toRightOf="@+id/i"/>
+
+            <TextView
+                android:id="@+id/j"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tole : "
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/i"/>
+
+            <TextView
+                android:id="@+id/detailsTole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/i"
+                android:layout_toRightOf="@+id/j"/>
+
+
+            <TextView
+                android:id="@+id/k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate and Review"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/j"/>
+
+            <TextView
+                android:id="@+id/s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate : "
+                android:textSize="18dp"
+                android:layout_below="@+id/k"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/Vrate"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:inputType="number"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:layout_below="@+id/k"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/s"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittxt_style"/>
+
+            <TextView
+                android:id="@+id/r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Review"
+                android:textSize="18dp"
+                android:layout_below="@+id/s"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/Vreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:maxLines="5"
+                android:scrollbars="vertical"
+                android:gravity="top"
+                android:hint="Write your review..."
+                android:textSize="18sp"
+                android:background="@drawable/edittxt_style"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:layout_below="@id/r"/>
+
+            <TextView
+                android:id="@+id/p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:background="@drawable/botton_bg"
+                android:layout_below="@id/Vreview"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/RateUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/p"/>
+
+            <TextView
+                android:id="@+id/recentRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/RateUser"/>
+
+            <TextView
+                android:id="@+id/recentReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/recentRate"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/vehicleDetailRateRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recentReview"
+                android:layout_marginTop="20dp"/>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

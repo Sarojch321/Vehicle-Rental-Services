@@ -1,0 +1,9 @@
+spring.application.name=Vehicle-Rental-Services
+
+#DB configuration
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/rent_services_api
+spring.dataspurce.username=root
+spring.datasource.password=1234
+spring.jpa.hibernate.ddl-auto= update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect

@@ -1,0 +1,48 @@
+package com.vehiclerentalservices.app.payloads;
+
+import com.vehiclerentalservices.app.entities.Admin;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class CustomerDto {
+	
+	private int id;
+	
+	
+	@NotEmpty
+	@Size(min = 4, message = "Name Must be minimum 4 character !!")
+	private String name;
+	
+	@NotEmpty
+	private String address;
+	
+	@NotEmpty
+	private String mobile;
+	
+	@Email(message = "email is not valid !!")
+	private String email;
+	
+	@NotEmpty
+	@Size(min = 4, max = 10, message = "Password must be in between 4 to 10 chracters !!")
+	private String password;
+	
+	@NotEmpty
+	private String licensephoto;
+	
+	@NotEmpty
+	private String photo;
+	
+	@NotEmpty
+	private String dob;
+	private int status;
+	private Admin admin;
+	
+}

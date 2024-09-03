@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KycActivity">
+
+    <include
+        android:id="@+id/navMenu"
+        layout="@layout/drawer_item_handler_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/navMenu"
+        android:overScrollMode="never"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/txtYourPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Your Photo"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/userPhoto"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/baseline_person_24"
+                android:layout_below="@+id/txtYourPhoto"/>
+
+            <TextView
+                android:id="@+id/choosePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userPhoto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/botton_bg"
+                android:text="Choose photo"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/choosePhoto"
+                android:layout_marginTop="30dp"
+                android:text="Name"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editTxtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtName"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtName"
+                android:layout_marginTop="20dp"
+                android:text="Address"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editTxtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAddress"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtAddress"
+                android:layout_marginTop="20dp"
+                android:text="Mobile No."
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/editTxtPhone"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPhone"
+                android:inputType="phone"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtPhone"
+                android:layout_marginTop="20dp"
+                android:text="Date of Birth"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Dob"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:layout_below="@+id/txtDob"
+                android:layout_toRightOf="@+id/selectDob"/>
+
+            <TextView
+                android:id="@+id/selectDob"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/baseline_date_range_24"
+                android:layout_below="@+id/txtDob"
+                />
+
+
+            <TextView
+                android:id="@+id/txtLicensePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Dob"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="License Photo"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/licensePhoto"
+                android:layout_width="250dp"
+                android:layout_height="220dp"
+                android:layout_below="@+id/txtLicensePhoto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/baseline_person_24" />
+
+            <TextView
+                android:id="@+id/chooseLicensePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/licensePhoto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/botton_bg"
+                android:text="Choose photo"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/SubmitKycBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chooseLicensePhoto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/edittxt_style"
+                android:text="Submit"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

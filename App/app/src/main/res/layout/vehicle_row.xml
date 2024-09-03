@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CE9FD6"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                android:backgroundTint="@color/black">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/vehicleTitleL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bullet 350 "
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:id="@+id/txtVehiclePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price : "
+                        android:textSize="20dp"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/vehicleTitleL"/>
+
+                    <TextView
+                        android:id="@+id/vehiclePriceL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/vehicleTitleL"
+                        android:layout_toRightOf="@+id/txtVehiclePrice"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/vehicleImageL"
+                android:layout_width="250dp"
+                android:layout_height="180dp"
+                android:layout_below="@+id/cardView"
+                android:layout_marginTop="5dp"/>
+
+            <ImageButton
+                android:id="@+id/vehicleBtnL"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/baseline_arrow_forward_ios_24"
+                android:layout_below="@+id/cardView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/lavender"
+                android:background="@drawable/go_btn"/>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

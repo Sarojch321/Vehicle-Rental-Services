@@ -1,0 +1,70 @@
+package com.vehiclerentalservices.app.controller;
+
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+import com.vehiclerentalservices.app.payloads.ApiResponse;
+import com.vehiclerentalservices.app.payloads.CustomerDto;
+import com.vehiclerentalservices.app.services.CustomerService;
+
+@RestController
+@RequestMapping("api/vehicleRentalServices")
+public class CustomerController {
+	
+	@Autowired
+	private CustomerService customerService;
+	
+	//get all customer
+	@GetMapping("/customer")
+	public ResponseEntity<List<CustomerDto>> getAllCutomer() {
+		return ResponseEntity.ok(this.customerService.getAllCustomer());
+		
+	}
+	
+	//get customer by id
+	@GetMapping("/customer/{id}")
+	public ResponseEntity<CustomerDto> getCustomerById(@PathVariable int id) {
+		
+		return ResponseEntity.ok(this.customerService.getCustomerById(id));
+	}
+	
+	//add customer
+	@PostMapping("/customer")
+	public ResponseEntity<CustomerDto> createCustomer(@RequestBody CustomerDto custdto) {
+		
+		CustomerDto createcust = this.customerService.createCustomer(custdto);
+		return new ResponseEntity<>(createcust, HttpStatus.CREATED);
+		
+	}
+	
+	//delete customer
+	@DeleteMapping("/customer/{id}")
+	public ResponseEntity<ApiResponse> deleteCustomer(@PathVariable int id) {
+		
+		this.deleteCustomer(id);
+		return new ResponseEntity<ApiResponse>(new ApiResponse("deleted", true), HttpStatus.OK);	
+		
+	}
+	
+	//update customer
+	@PutMapping("/customer/{id}")
+	public ResponseEntity<CustomerDto> updateCustomer(@RequestBody CustomerDto customerdto, @PathVariable int id) {
+		
+		CustomerDto updatedCustomer = this.customerService.updateCustomer(customerdto, id);
+		return ResponseEntity.ok(updatedCustomer);
+	}
+}
+

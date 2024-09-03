@@ -1,0 +1,95 @@
+package com.vehiclerentalservices.app.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.vehiclerentalservices.app.payloads.ApiResponse;
+import com.vehiclerentalservices.app.payloads.BookingDto;
+import com.vehiclerentalservices.app.services.BookingService;
+
+import jakarta.validation.Valid;
+
+@RestController
+@RequestMapping("api/vehicleRentalServices")
+public class BookingController {
+	
+	@Autowired
+	private BookingService bookingService;
+	
+	@GetMapping("/booking")
+	public ResponseEntity<List<BookingDto>> getAllBookVehicle(){
+		return ResponseEntity.ok(this.bookingService.getAllBooking());
+		
+	}
+	
+	@GetMapping("/booking/{id}")
+	public ResponseEntity<BookingDto> getBookVehicleById(@PathVariable int id) {
+		return ResponseEntity.ok(this.bookingService.getBookingById(id));
+	}
+	
+	@PostMapping("/user/{uid}/vehicle/{vid}/booking")
+	public ResponseEntity<BookingDto> createBookVechile(@Valid @RequestBody BookingDto book, @PathVariable int uid, @PathVariable int vid) {
+		BookingDto books = this.bookingService.createBooking(book, uid, vid);
+		return new ResponseEntity<>(books, HttpStatus.CREATED);
+	}
+	
+	@DeleteMapping("/booking/{id}")
+	public ResponseEntity<ApiResponse> deleteBooking(@PathVariable int id) {
+		
+		this.bookingService.deleteBooking(id);
+		return new ResponseEntity<ApiResponse>(new ApiResponse("deleted", true), HttpStatus.OK);	
+	}
+	
+	@PutMapping("/booking/{id}")
+	public ResponseEntity<BookingDto> updateBookVehicle(@Valid @RequestBody BookingDto book, @PathVariable int id) {
+		
+		BookingDto books = this.bookingService.updateBooking(book, id);
+		return ResponseEntity.ok(books);
+	}
+	
+	@GetMapping("/user/{id}/booking")
+	public ResponseEntity<List<BookingDto>> getAllByUser(@PathVariable int id){
+		List<BookingDto> list = this.bookingService.getAllByUser(id);
+		return new ResponseEntity<List<BookingDto>>(list, HttpStatus.OK);
+	}
+	
+	@GetMapping("/vehicle/{id}/booking")
+	public ResponseEntity<List<BookingDto>> getAllByVehicle(@PathVariable int id){
+		
+		List<BookingDto> list = this.bookingService.getAllByVehicle(id);
+		return new ResponseEntity<List<BookingDto>>(list, HttpStatus.OK);
+		
+	}
+	
+	@GetMapping("/booking/status/user/{uid}/{flag}")
+	public ResponseEntity<List<BookingDto>> getByStatus(@PathVariable int flag, @PathVariable int uid){
+		List<BookingDto> list = this.bookingService.getByFlag(flag, uid);
+		return new ResponseEntity<List<BookingDto>>(list, HttpStatus.OK);
+	}
+	
+	@GetMapping("/booking/status/{flag}")
+	public ResponseEntity<List<BookingDto>> getByFlags(@PathVariable int flag){
+		List<BookingDto> list = this.bookingService.getByFlags(flag);
+		return new ResponseEntity<List<BookingDto>>(list, HttpStatus.OK);
+	}
+
+}
+
+
+
+
+
+
+
+

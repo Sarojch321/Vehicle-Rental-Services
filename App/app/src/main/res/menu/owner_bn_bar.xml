@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+     <item
+    android:id="@+id/approveBooking"
+    android:icon="@drawable/baseline_approval_24"
+    android:title="Approve Booking" />
+
+    <item
+        android:id="@+id/homeO"
+        android:icon="@drawable/home"
+        android:title="Home" />
+
+     <item
+       android:id="@+id/addVehicle"
+       android:icon="@drawable/baseline_add_24"
+       android:title="Add Vehicle" />
+
+    <item
+        android:id="@+id/historyO"
+        android:icon="@drawable/history"
+        android:title="History" />
+</menu>

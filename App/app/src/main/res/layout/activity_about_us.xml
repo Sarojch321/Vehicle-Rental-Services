@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUsActivity">
+
+    <include
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/drawer_item_handler_menu"/>
+
+    <TextView
+        android:id="@+id/uss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We are B.E computer students studying in NAST, Dhangadhi.This is our final year project."
+        android:textSize="17sp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/menu"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/us1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team Members :"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/uss"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Arjun Chaudhary"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/us1"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. Sagar Chaudhary"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/name1"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/name3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. Sangam Chaudhary"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/name2"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/name4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4. Saroj Kumar Dangaura"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/name3"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/mission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our Goal:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/name4"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/mission1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Digitalized vehicle renting services."
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/mission"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+</RelativeLayout>

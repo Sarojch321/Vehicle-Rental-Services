@@ -1,0 +1,5 @@
+package com.VehicleRentalServices.app.entities;
+
+public class Customer {
+
+}

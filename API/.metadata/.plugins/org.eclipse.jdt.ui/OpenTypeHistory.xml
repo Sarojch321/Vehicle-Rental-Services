@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Vehicle-Rental-Services/C:\/Users\/DELL\/.m2\/repository\/org\/hibernate\/orm\/hibernate-core\/6.5.2.Final\/hibernate-core-6.5.2.Final.jar=/maven.pomderived=/true=/=/maven.groupId=/org.hibernate.orm=/=/maven.artifactId=/hibernate-core=/=/maven.version=/6.5.2.Final=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.hibernate.dialect(MySQL8Dialect.class[MySQL8Dialect" modifiers="1048609" timestamp="1716240261000"/>
+    <typeInfo handle="=Vehicle-Rental-Services/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.vehiclerentalservices.app.services{HandOverLocationService.java[HandOverLocationService" modifiers="513" timestamp="1719767149036"/>
+    <typeInfo handle="=Vehicle-Rental-Services/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.vehiclerentalservices.app.services{VehicleService.java[VehicleService" modifiers="513" timestamp="1722191802065"/>
+    <typeInfo handle="=Vehicle-Rental-Services/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.vehiclerentalservices.app.services{VehiclePhotoService.java[VehiclePhotoService" modifiers="513" timestamp="1720022447352"/>
+    <typeInfo handle="=Vehicle-Rental-Services/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.vehiclerentalservices.app.services{BookingService.java[BookingService" modifiers="513" timestamp="1724254724337"/>
+    <typeInfo handle="=Vehicle-Rental-Services/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.vehiclerentalservices.app.services{FavoriteService.java[FavoriteService" modifiers="513" timestamp="1719821687039"/>
+    <typeInfo handle="=Vehicle-Rental-Services/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.vehiclerentalservices.app.services{FileService.java[FileService" modifiers="513" timestamp="1720074571539"/>
+</typeInfoHistroy>

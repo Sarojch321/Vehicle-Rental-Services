@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".BookingActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Booking Vehicle"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardViewText"
+        android:layout_marginTop="5dp"
+        android:overScrollMode="never"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pickupDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="30dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textPickDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pick up Date and Time"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/txtPickDate"
+                        android:layout_width="170dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittxt_style"
+                        android:hint="Date"
+                        android:paddingStart="15dp"
+                        android:paddingVertical="5dp"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/textPickDate"
+                        app:layout_constraintStart_toStartOf="@+id/textPickDate"/>
+
+                    <TextView
+                        android:id="@+id/selectPickDate"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/baseline_date_range_24"
+                        app:layout_constraintTop_toTopOf="@+id/txtPickDate"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtPickDate"
+                        app:layout_constraintEnd_toEndOf="@+id/txtPickDate"
+                        android:layout_marginEnd="5dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtPickTime"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/edittxt_style"
+                        android:hint="Time"
+                        android:paddingStart="15dp"
+                        android:paddingVertical="5dp"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/textPickDate"
+                        app:layout_constraintStart_toEndOf="@+id/txtPickDate"/>
+
+                    <TextView
+                        android:id="@+id/selectPickTime"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/baseline_access_time_24"
+                        app:layout_constraintTop_toTopOf="@+id/txtPickTime"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtPickTime"
+                        app:layout_constraintEnd_toEndOf="@+id/txtPickTime"
+                        android:layout_marginEnd="5dp"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dropoffDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pickupDate"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textDropDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Drop Off Date and Time"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/txtDropDate"
+                        android:layout_width="170dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittxt_style"
+                        android:hint="Date"
+                        android:paddingVertical="5dp"
+                        android:paddingStart="15dp"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/textDropDate"
+                        app:layout_constraintStart_toStartOf="@+id/textDropDate"/>
+
+                    <TextView
+                        android:id="@+id/selectDropDate"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/baseline_date_range_24"
+                        app:layout_constraintTop_toTopOf="@+id/txtDropDate"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtDropDate"
+                        app:layout_constraintEnd_toEndOf="@+id/txtDropDate"
+                        android:layout_marginEnd="5dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtDropTime"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/edittxt_style"
+                        android:paddingVertical="5dp"
+                        android:paddingStart="15dp"
+                        android:hint="Time"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/textDropDate"
+                        app:layout_constraintStart_toEndOf="@+id/txtDropDate"/>
+
+                    <TextView
+                        android:id="@+id/selectDropTime"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/baseline_access_time_24"
+                        app:layout_constraintTop_toTopOf="@+id/txtDropTime"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtDropTime"
+                        app:layout_constraintEnd_toEndOf="@+id/txtDropTime"
+                        android:layout_marginEnd="5dp"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pickupCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dropoffDate"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txtPickLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pick up Location"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pdistrict"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtPickLocation"
+                        android:layout_marginTop="15dp"
+                        android:text="District : "
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/txtpDistrict"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtPickLocation"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/pdistrict"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/pcity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pdistrict"
+                        android:layout_marginTop="25dp"
+                        android:text="City : "
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/txtpCity"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtpDistrict"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/pcity"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/pwardNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pcity"
+                        android:layout_marginTop="25dp"
+                        android:text="Ward No. : "
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/txtpWardNo"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pcity"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/pwardNo"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/ptole"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pwardNo"
+                        android:layout_marginTop="25dp"
+                        android:text="Tole : "
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/txtpTole"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pwardNo"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/ptole"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <CheckBox
+                android:id="@+id/checkBoxForSameLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pickupCardView"
+                android:layout_marginTop="10dp"
+                android:text="Same Drop Off Location"
+                android:textSize="18sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dropCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/checkBoxForSameLocation"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txtDropLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Drop off Location"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ddistrict"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtDropLocation"
+                        android:layout_marginTop="15dp"
+                        android:text="District : "
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/txtdDistrict"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtDropLocation"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/ddistrict"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/dcity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ddistrict"
+                        android:layout_marginTop="25dp"
+                        android:text="City : "
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/txtdCity"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtdDistrict"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/dcity"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/dwardNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dcity"
+                        android:layout_marginTop="25dp"
+                        android:text="Ward No. : "
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/txtdWardNo"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dcity"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/dwardNo"
+                        android:inputType="number"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/dtole"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dwardNo"
+                        android:layout_marginTop="25dp"
+                        android:text="Tole : "
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/txtdTole"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dwardNo"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/dtole"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/driverCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dropCardView"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/driverNeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Do you need driver?"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/groupRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/driverNeed">
+
+                        <RadioButton
+                            android:id="@+id/txtDriverNeedYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/txtDriverNeedNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/driverNeed"
+                            android:layout_marginStart="20dp"
+                            android:layout_toRightOf="@+id/txtDriverNeedYes"
+                            android:text="No"
+                            android:textSize="18sp" />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/driverCardView"
+                android:layout_marginTop="20dp"
+                android:text="Total amount : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAmount"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/placeBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTotalAmount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Place Booking"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

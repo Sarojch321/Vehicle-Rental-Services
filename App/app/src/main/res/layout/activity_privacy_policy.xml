@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrivacyPolicyActivity">
+
+    <include
+        android:id="@+id/menu1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/drawer_item_handler_menu"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/menu1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/notice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy for Vehicle rental services"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/notice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This Privacy Policy describes how this app  collects, uses, and discloses your personal information when you use our mobile application."
+                android:textSize="17sp"
+                android:layout_below="@+id/notice1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/notice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Information We Collect"
+                android:layout_below="@+id/notice2"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/notice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We collect several types of information from and about you when you use the App:"
+                android:textSize="17sp"
+                android:layout_below="@+id/notice3"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/notice5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notice4"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="1. Information You Provide Directly: "
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/notice6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This includes information you provide when you create an account, book a vehicle, or contact us for support. This may include your name, email address, phone number, driver's license information, payment information, and location information."
+                android:textSize="17sp"
+                android:layout_below="@+id/notice5"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/notice7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notice6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="2. Device Information:"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/notice8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We collect information about the device you use to access the App, such as the device type, operating system, IP address, and unique device identifiers."
+                android:textSize="17sp"
+                android:layout_below="@+id/notice7"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/notice9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notice8"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="3. Location Information: "
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notice10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notice9"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:text="We may collect your location information with your consent to provide features like finding nearby vehicles or tracking your rental. You can always disable location services through your device settings."
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/notice11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notice10"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="4. Usage Information:"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notice12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notice11"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:text="We collect information about how you use the App, such as the types of vehicles you browse, the rentals you book, and your interactions with customer service."
+                android:textSize="17sp"
+
+                />
+
+            <TextView
+                android:id="@+id/notice13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How We Use Your Information"
+                android:layout_below="@+id/notice12"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/notice14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="To provide and operate the App and our services."
+                android:layout_below="@+id/notice13"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/notice15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="To personalize your experience with the App."
+                android:layout_below="@+id/notice14"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/notice16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="To comply with legal and regulatory obligations."
+                android:layout_below="@+id/notice15"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"/>
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

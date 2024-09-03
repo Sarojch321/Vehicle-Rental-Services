@@ -1,0 +1,74 @@
+package com.vehiclerentalservices.app.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.vehiclerentalservices.app.entities.Customer;
+import com.vehiclerentalservices.app.payloads.CustomerDto;
+import com.vehiclerentalservices.app.services.CustomerService;
+
+@RestController
+@RequestMapping("api/vehicleRentalServices")
+public class CustomerController {
+	
+	@Autowired
+	private CustomerService customerService;
+	
+	//get all customer
+	@GetMapping("/customer")
+	public ResponseEntity<List<Customer>> getAllCutomer() {
+		List<Customer> customer = customerService.getAllCustomer();
+		if(customer.size()<=0) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+		return ResponseEntity.of(Optional.of(customer));
+	}
+	
+	//get customer by id
+	@GetMapping("/customer/{id}")
+	public ResponseEntity<Customer> getCustomerById(@PathVariable int id) {
+		Customer customer = customerService.getCustomerById(id);
+		if(customer== null) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+		return ResponseEntity.of(Optional.of(customer));
+	}
+	
+	//add customer
+	@PostMapping("/customer")
+	public ResponseEntity<CustomerDto> createCustomer(@RequestBody CustomerDto custdto) {
+		
+		CustomerDto createcust = this.customerService.createCustomer(custdto);
+		return new ResponseEntity<>(createcust, HttpStatus.CREATED);
+		
+	}
+	
+	//delete customer
+	@DeleteMapping("/customer/{id}")
+	public ResponseEntity<String> deleteCustomer(@PathVariable int id) {
+		this.deleteCustomer(id);
+		return new ResponseEntity<>(HttpStatus.OK);	
+		
+	}
+	
+	//update customer
+	@PutMapping("/customer/{id}")
+	public ResponseEntity<CustomerDto> updateCustomer(@RequestBody CustomerDto customerdto, @PathVariable int id) {
+		
+		CustomerDto updatedCustomer = this.customerService.updateCustomer(customerdto, id);
+		return ResponseEntity.ok(updatedCustomer);
+	}
+}
+

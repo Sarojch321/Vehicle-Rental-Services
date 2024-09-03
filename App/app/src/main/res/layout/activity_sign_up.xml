@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SignUpActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/keyImg"
+                    android:layout_width="272dp"
+                    android:layout_height="180dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/key2" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/keyImg"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="20dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/signUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sign Up"
+                            android:textAlignment="center"
+                            android:textColor="@color/lavender"
+                            android:textSize="37sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@drawable/edittxt_style"
+                            android:drawableStart="@drawable/baseline_person_24"
+                            android:drawablePadding="8dp"
+                            android:hint="Name"
+                            android:inputType="text"
+                            android:padding="8dp"
+                            app:layout_constraintEnd_toEndOf="@+id/signUp"
+                            app:layout_constraintStart_toStartOf="@+id/signUp"
+                            app:layout_constraintTop_toBottomOf="@+id/signUp" />
+
+                        <EditText
+                            android:id="@+id/Address"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/edittxt_style"
+                            android:drawableStart="@drawable/baseline_house_24"
+                            android:drawablePadding="8dp"
+                            android:hint="Address"
+                            android:inputType="text"
+                            android:padding="8dp"
+                            app:layout_constraintEnd_toEndOf="@+id/Name"
+                            app:layout_constraintStart_toStartOf="@+id/Name"
+                            app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+                        <EditText
+                            android:id="@+id/PhoneNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/edittxt_style"
+                            android:drawableStart="@drawable/baseline_phone_24"
+                            android:drawablePadding="8dp"
+                            android:hint="Mobile No."
+                            android:inputType="phone"
+                            android:padding="8dp"
+                            app:layout_constraintEnd_toEndOf="@+id/Address"
+                            app:layout_constraintStart_toStartOf="@+id/Address"
+                            app:layout_constraintTop_toBottomOf="@+id/Address" />
+
+                        <EditText
+                            android:id="@+id/uName"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/edittxt_style"
+                            android:drawableStart="@drawable/baseline_person_24"
+                            android:drawablePadding="8dp"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:padding="8dp"
+                            app:layout_constraintEnd_toEndOf="@+id/PhoneNo"
+                            app:layout_constraintStart_toStartOf="@+id/PhoneNo"
+                            app:layout_constraintTop_toBottomOf="@+id/PhoneNo" />
+
+                        <EditText
+                            android:id="@+id/Pass"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/edittxt_style"
+                            android:drawableStart="@drawable/baseline_lock_24"
+                            android:drawablePadding="8dp"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            app:layout_constraintEnd_toEndOf="@+id/uName"
+                            app:layout_constraintStart_toStartOf="@+id/uName"
+                            app:layout_constraintTop_toBottomOf="@+id/uName" />
+
+                        <ImageView
+                            android:id="@+id/closeEyeForPass"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/baseline_visibility_off_24"
+                            app:layout_constraintBottom_toBottomOf="@+id/Pass"
+                            app:layout_constraintEnd_toEndOf="@+id/Pass"
+                            app:layout_constraintTop_toTopOf="@+id/Pass" />
+
+                        <EditText
+                            android:id="@+id/conformPass"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/edittxt_style"
+                            android:drawableStart="@drawable/baseline_lock_24"
+                            android:drawablePadding="8dp"
+                            android:hint="Confirm Password"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            app:layout_constraintEnd_toEndOf="@+id/Pass"
+                            app:layout_constraintStart_toStartOf="@+id/Pass"
+                            app:layout_constraintTop_toBottomOf="@+id/Pass" />
+
+                        <ImageView
+                            android:id="@+id/closeEyeForOnformPass"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/baseline_visibility_off_24"
+                            app:layout_constraintBottom_toBottomOf="@+id/conformPass"
+                            app:layout_constraintEnd_toEndOf="@+id/conformPass"
+                            app:layout_constraintTop_toTopOf="@+id/conformPass" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Terms and Privacy Policy"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toStartOf="@+id/conformPass"
+                            app:layout_constraintTop_toBottomOf="@+id/conformPass" />
+
+
+                        <Button
+                            android:id="@+id/signUpbtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/edittxt_style"
+                            android:text="Sign Up"
+                            android:textSize="25sp"
+                            app:layout_constraintEnd_toEndOf="@+id/conformPass"
+                            app:layout_constraintStart_toStartOf="@+id/checkBox"
+                            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+
+                        <TextView
+                            android:id="@+id/alreadyAcc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Already have an account? "
+                            android:textSize="18sp"
+                            android:layout_marginTop="20dp"
+                            android:padding="5dp"
+                            app:layout_constraintEnd_toStartOf="@+id/plzLogin"
+                            app:layout_constraintStart_toStartOf="@+id/signUpbtn"
+                            app:layout_constraintTop_toBottomOf="@+id/signUpbtn" />
+
+                        <TextView
+                            android:id="@+id/plzLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Login"
+                            android:textSize="18sp"
+                            android:textColor="@color/lavender"
+                            android:layout_marginTop="20dp"
+                            android:padding="5dp"
+                            app:layout_constraintStart_toEndOf="@+id/alreadyAcc"
+                            app:layout_constraintTop_toBottomOf="@+id/signUpbtn" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:layout_marginTop="30dp"
+                >
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Our "
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms"
+                    android:textColor="@color/lavender"
+                    app:layout_constraintStart_toEndOf="@+id/txt1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" and"
+                    app:layout_constraintStart_toEndOf="@+id/txt2"
+                    app:layout_constraintTop_toTopOf="@+id/txt1" />
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Privacy Policy."
+                    android:textColor="@color/lavender"
+                    app:layout_constraintStart_toEndOf="@+id/txt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You may receive email notifications from us at any time."
+                    app:layout_constraintStart_toStartOf="@+id/txt1"
+                    app:layout_constraintTop_toBottomOf="@id/txt3" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

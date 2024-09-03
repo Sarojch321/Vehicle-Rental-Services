@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".BookingActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Booking Approve"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardViewText"
+        android:layout_marginTop="5dp"
+        android:overScrollMode="never"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/appVehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer "
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/appVehicle"/>
+
+            <TextView
+                android:id="@+id/y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name : "
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/x"/>
+
+            <TextView
+                android:id="@+id/appCName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/x"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/y"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile : "
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/y"/>
+
+            <TextView
+                android:id="@+id/appCPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/y"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/z"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick up Date : "
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/z"/>
+
+            <TextView
+                android:id="@+id/appPickDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/a"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/z"/>
+
+
+            <TextView
+                android:id="@+id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/a"
+                android:layout_marginTop="10dp"
+                android:text="Drop off Date : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/appDropDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/a"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/b"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/b"
+                android:layout_marginTop="10dp"
+                android:text="Total amount : Rs "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/appAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/b"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/c"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtPickLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/c"
+                android:layout_marginTop="20dp"
+                android:text="Pick up Location"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pdistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPickLocation"
+                android:layout_marginTop="10dp"
+                android:text="District : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtpDistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPickLocation"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/pdistrict"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pcity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdistrict"
+                android:layout_marginTop="10dp"
+                android:text="City : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtpCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdistrict"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/pcity"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pwardNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pcity"
+                android:layout_marginTop="10dp"
+                android:text="Ward No. : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtpWardNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pcity"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/pwardNo"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ptole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pwardNo"
+                android:layout_marginTop="10dp"
+                android:text="Tole : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtpTole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pwardNo"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/ptole"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/txtDropLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtpTole"
+                android:layout_marginTop="20dp"
+                android:text="Drop off Location"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ddistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDropLocation"
+                android:layout_marginTop="15dp"
+                android:text="District : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtdDistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDropLocation"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/ddistrict"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/dcity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ddistrict"
+                android:layout_marginTop="10dp"
+                android:text="City : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtdCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtdDistrict"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/dcity"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/dwardNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dcity"
+                android:layout_marginTop="10dp"
+                android:text="Ward No. : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtdWardNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dcity"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/dwardNo"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/dtole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dwardNo"
+                android:layout_marginTop="10dp"
+                android:text="Tole : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtdTole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dwardNo"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/dtole"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtdTole"
+                android:layout_marginTop="20dp"
+                android:text="Driver Need : "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/driverNeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtdTole"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/h"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/placeBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/driverNeed"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Approve Booking"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

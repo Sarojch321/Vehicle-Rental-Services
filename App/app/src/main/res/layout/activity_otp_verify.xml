@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".OtpVerifyActivity">
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="293dp"
+        android:layout_height="213dp"
+        android:background="@drawable/otp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verification"
+        android:textSize="35sp"
+        android:textColor="@color/lavender"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/img"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/txtInfo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter Your OTP Code"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/txtInfo"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/otpCode"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:inputType="phone"
+        android:layout_below="@+id/txtInfo1"
+        android:hint="OTP"
+        android:padding="20dp"
+        android:importantForAutofill="no"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/edittxt_style"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/txtResend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/lavender"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/otpCode"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/verifyBtn"
+        android:layout_width="224dp"
+        android:layout_height="60dp"
+        android:text="Verify"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="@drawable/edittxt_style"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtResend"
+        android:layout_marginTop="44dp"
+
+
+        />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+package com.vehiclerentalservices.app.services;
+
+import java.util.List;
+
+import com.vehiclerentalservices.app.payloads.BookingDto;
+
+public interface BookingService {
+	
+	
+	List<BookingDto> getAllBooking();
+	
+	BookingDto getBookingById(Integer id);
+	
+	BookingDto createBooking(BookingDto bookDto, Integer uId, Integer vId);
+	
+	BookingDto updateBooking(BookingDto bookDto, Integer id);
+	
+	void deleteBooking(Integer id);
+	
+	List<BookingDto> getAllByUser(Integer id);
+	
+	List<BookingDto> getAllByVehicle(Integer id);
+	
+	List<BookingDto> getByFlag(Integer flag);
+	
+}
+
+
+
+
+
+
+
+
+

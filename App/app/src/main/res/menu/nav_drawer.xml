@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/profile"
+            android:title="@string/profile"
+            android:icon="@drawable/account_circle"/>
+
+        <item
+            android:id="@+id/applyKyc"
+            android:title="@string/apply_for_kyc"
+            android:icon="@drawable/baseline_drive_file_rename_outline_24"/>
+
+        <item
+            android:id="@+id/changePass"
+            android:title="@string/change_password"
+            android:icon="@drawable/round_change_circle_24"/>
+
+        <item
+            android:id="@+id/EarnWithUs"
+            android:title="@string/earn_with_us"
+            android:icon="@drawable/baseline_attach_money_24"/>
+
+        <item
+            android:id="@+id/switchProfile"
+            android:title="Switch profile"
+            android:icon="@drawable/baseline_switch_account_24"/>
+
+        <item
+            android:id="@+id/isBook"
+            android:title="Your Booking"
+            android:icon="@drawable/baseline_menu_book_24"/>
+
+    </group>
+
+    <item android:title="@string/help_amp_legal">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/support"
+                    android:title="@string/support_help"
+                    android:icon="@drawable/baseline_contact_support_24"/>
+
+                <item
+                    android:id="@+id/privacy"
+                    android:title="@string/privacy_policy"
+                    android:icon="@drawable/baseline_lock_24"/>
+
+                <item
+                    android:id="@+id/terms"
+                    android:title="@string/terms_and_conditions"
+                    android:icon="@drawable/baseline_reorder_24"/>
+
+            </group>
+
+        </menu>
+    </item>
+
+
+    <item android:title="@string/more">
+
+        <menu>
+            <group android:checkableBehavior="single">
+
+
+                <item
+                    android:id="@+id/aboutUs"
+                    android:title="@string/about_us"
+                    android:icon="@drawable/sharp_attribution_24"/>
+
+            </group>
+
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/logout"
+            android:title="@string/logout"
+            android:icon="@drawable/baseline_logout_24"/>
+
+    </group>
+
+</menu>
